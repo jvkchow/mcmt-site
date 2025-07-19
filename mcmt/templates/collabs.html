@@ -4,16 +4,16 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <!-- Display Collabs -->
+            <!-- Display artists -->
             <div class="col-12">
                 <h3 class="display-3 ps-4 py-4">Collabs</h3>
                 {% if collabs %}
                     {% for collab in collabs %}
                     <div class="container-fluid ps-4">
-                        <div class="card mb-3" style="width: 70%; min-height: 10rem;">
+                        <div class="card mb-3" style="width: 100%; min-height: 10rem;">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ collab.thumbnail }}" class="img-thumbnail" width="50%", height="50%">
+                                    <img src="{{ collab.thumbnail }}" class="img-thumbnail" width="25%", height="25%">
                                     <h3 class="card-text ps-4">{{ collab.title }}</h3>
                                     <h4 class="card-text ps-4">{{ collab.channel }}</h4>
                                 </div>
@@ -28,4 +28,5 @@
             </div>
         </div>
     </div>
+
 {% endblock content %}
