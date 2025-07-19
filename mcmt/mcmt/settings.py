@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mcmt.wsgi.app'
+WSGI_APPLICATION = 'mcmt.wsgi.application'
 
 
 # Database

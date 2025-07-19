@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 
 import os
 
-from django.core.wsgi import get_wsgi_application
+from django.urls import path
+from django.contrib import admin
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mcmt.settings')
-
-application = get_wsgi_application()
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', HomeView.as_view(), name='home')
+]
