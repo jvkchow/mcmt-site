@@ -61,5 +61,4 @@ class CollabView(APIView):
             collabs = self.get_collabs(test_ids)
             return render(request, "collabs.html", {"collabs":collabs})
         except Exception as e:
-            print('except')
             return render(request, "home.html")
