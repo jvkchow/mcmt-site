@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Collabs {% endblock title %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Display Collabs -->
+            <div class="col-12">
+                <h3 class="display-3 ps-4 py-4">Collabs</h3>
+                {% if collabs %}
+                    {% for collab in collabs %}
+                    <div class="container-fluid ps-4">
+                        <div class="card mb-3" style="width: 70%; min-height: 10rem;">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ collab.thumbnail }}" class="rounded">
+                                    <h3 class="card-text ps-4">{{ collab.title }}</h3>
+                                </div>
+                            </div>
+                            <a class="stretched-link" href="{{ collab.url }}" target="_blank"></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <h3 class="ps-4 py-4">No collabs could be found.</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from collabs.views import CollabView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', CollabView.as_view(), name='collabs')
 ]
+
+# path('', CollabView.as_view(), name='collabs')
