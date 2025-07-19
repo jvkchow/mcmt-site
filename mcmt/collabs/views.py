@@ -42,7 +42,7 @@ class CollabView(APIView):
         for vid in json_res["items"]:
             collab_info = {}
             collab_info["url"] = ''.join(["https://www.youtube.com/watch?v=", vid["id"]])
-            collab_info["date"] = vid["snippet"]["publishedAt"]
+            collab_info["date"] = vid["snippet"]["publishedAt"][0:10]
             collab_info["title"] = vid["snippet"]["title"]
             collab_info["thumbnail"] = vid["snippet"]["thumbnails"]["maxres"]["url"]
             collab_info["channel"] = vid["snippet"]["channelTitle"]
